@@ -16,7 +16,8 @@ datasource db {
 
 enum USERROLE {
     ADMIN
-    USER
+    ELDER
+    GUARDIAN
 }
 
 // Necessary for Next auth
@@ -42,13 +43,8 @@ model Account {
 model User {
     id                String    @id @default(cuid())
     name              String?
-    username          String?   @unique
-    usernameUpdatedAt DateTime?
-    banner            String?
-    embed             String?
-    role              USERROLE  @default(USER)
+    role              USERROLE  @default(ELDER)
     email             String?   @unique
-    about             String?   @default("New Here✌️")
     emailVerified     DateTime?
     joinedAt          DateTime? @default(now())
     image             String?
