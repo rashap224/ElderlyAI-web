@@ -41,14 +41,23 @@ model Account {
 }
 
 model User {
-    id                String    @id @default(cuid())
-    name              String?
-    role              USERROLE  @default(ELDER)
-    email             String?   @unique
-    emailVerified     DateTime?
-    joinedAt          DateTime? @default(now())
-    image             String?
-    accounts          Account[]
+    id            String     @id @default(cuid())
+    name          String?
+    role          USERROLE   @default(ELDER)
+    email         String?    @unique
+    emailVerified DateTime?
+    joinedAt      DateTime?  @default(now())
+    image         String?
+    accounts      Account[]
+    guardian      Guardian[]
+}
+
+model Guardian {
+    id        String   @id @default(cuid())
+    userId    String
+    elderId   String
+    elder     User     @relation(fields: [elderId], references: [id], onDelete: Cascade)
+    createdAt DateTime @default(now())
 }
 
 enum STATUS {
