@@ -42,20 +42,6 @@ export const getUserByEmail = async (email: string) => {
   }
 };
 
-export const getUserByUsername = async (username: string) => {
-  try {
-    const user = await db.user.findUnique({
-      where: {
-        username,
-      },
-      include: { },
-    });
-    return user;
-  } catch (error) {
-    return null;
-  }
-};
-
 export const currentUser = async () => {
   const session = await auth();
 
@@ -73,3 +59,17 @@ export const currentUsername = async () => {
 
   return session?.user?.username;
 };
+
+export const onWaitlist = async (email: string) => {
+  try {
+    const user = await db.waitlist.findUnique({
+      where: {
+        email,
+      },
+    });
+    return user;
+  } catch (error) {
+    return null;
+  }
+};
+

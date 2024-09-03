@@ -1,10 +1,9 @@
-import { IconBrandGithub } from "@tabler/icons-react";
-import Link from "next/link";
 import { ModeToggle } from "~/components/ModeToogle";
-import { auth } from "~/server/auth";
+import { redirect } from "next/navigation";
 
 export default async function HomePage() {
-  const session = await auth();
+  redirect("/waitlist");
+
   return (
     <div className="relative flex min-h-dvh items-center justify-center gap-2 overflow-hidden md:min-h-screen">
       <div className="flex gap-3">

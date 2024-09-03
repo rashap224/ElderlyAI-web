@@ -88,3 +88,9 @@ model webhookEvent {
     body            Json
     processingError String?
 }
+
+model Waitlist {
+    id     String   @id @default(cuid())
+    email  String   @unique
+    signed DateTime @default(now())
+}

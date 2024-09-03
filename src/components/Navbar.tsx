@@ -10,7 +10,7 @@ import { MagicButton } from "./ui/magicbuton";
 
 export default function Navbar() {
   return (
-    <div className="sticky border-b top-0 z-50 flex h-16 w-full items-center justify-center bg-transparent backdrop-blur-md transition-all">
+    <div className="sticky top-0 z-50 flex h-16 w-full items-center justify-center border-b bg-transparent backdrop-blur-md transition-all">
       <div className="flex h-full w-full px-2 md:w-[85%] md:px-0 lg:w-[60%]">
         <div className="my-1 flex h-full w-full items-center justify-between md:my-0">
           {/* Logo */}
@@ -47,14 +47,16 @@ export default function Navbar() {
               target="_blank"
               className=""
             >
-              <Button size={"icon"} variant={"ghost"}>
+              <Button
+                size={"icon"}
+                variant={"ghost"}
+                className="bg-transparent"
+              >
                 <IconBrandDiscord className="hover:bg-muted" />
               </Button>
             </Link>
-            <ModeToggle btnClass={"hover:bg-muted"} />
-            <Link href={"/auth"} className="hidden md:block">
-              <MagicButton>Get Started</MagicButton>
-            </Link>
+            <ModeToggle btnClass={"hover:bg-muted bg-transparent"} />
+            <MagicButton className="bg-transparent">Comming Soon</MagicButton>
           </div>
         </div>
       </div>
