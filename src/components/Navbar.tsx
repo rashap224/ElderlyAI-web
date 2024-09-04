@@ -16,13 +16,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Link href={"/"} className="flex items-center gap-2">
-              <Image
-                src="/favicon.ico"
-                width={35}
-                height={35}
-                alt="Logo"
-                priority
-              />
+              <p className="font-bold">Elderly AI</p>
             </Link>
           </div>
           {/* Navlinks */}

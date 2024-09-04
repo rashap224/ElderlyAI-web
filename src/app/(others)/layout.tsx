@@ -3,5 +3,5 @@ export default async function TermsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="bg-[#151517] px-2 w-full ">{children}</main>;
+  return <main className="w-full px-2">{children}</main>;
 }

@@ -11,16 +11,13 @@ export default async function page() {
       <Navbar />
       <div className="relative min-h-[94dvh] md:min-h-[92vh]">
         <div className="flex min-h-[94dvh] w-full flex-col items-center justify-center gap-4 md:min-h-[92vh]">
-          <Image
-            className="mr-2 h-16 w-16 cursor-pointer"
-            src={"/favicon.ico"}
-            alt="logo"
-            width={64}
-            height={64}
-          />
-          <p className="text-4xl font-semibold md:text-6xl">Companion for Elders</p>
-          <p className="text-sm font-light">
-            You might be busy with your life, but your elders need you help. We bring you Elderly AI
+          <p className="font-bold">Elderly AI</p>
+          <p className="text-4xl font-semibold md:text-6xl">
+            Companion for Elders
+          </p>
+          <p className=" font-normal">
+            You might be busy with your life, but your elders need you help. We
+            bring you Elderly AI
           </p>
 
           <WaitlistForm />
