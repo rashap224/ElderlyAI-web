@@ -55,7 +55,7 @@ export default function WaitlistForm() {
         <Button
           disabled={disabled}
           type="submit"
-          className="flex h-10 flex-none items-center gap-1 rounded-r-md bg-gradient-to-b from-blue-600 to-blue-700 px-3 text-center text-xs uppercase text-white hover:bg-blue-700"
+          className="flex h-10 flex-none items-center gap-1 rounded-r-md bg-gradient-to-b from-blue-600 to-blue-700 px-3 text-center text-xs uppercase text-white hover:bg-blue-700 border border-blue-700"
         >
           {loading && <Loader className="animate-spin" size={16} />}
           {!loading ? "Join Waitlist" : "Joining..."}
